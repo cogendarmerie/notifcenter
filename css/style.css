@@ -1,0 +1,207 @@
+:root
+{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+@font-face
+{
+    font-family: "PlusJakartaSans-Medium";
+    src: url('../assets/fonts/static/PlusJakartaSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: "PlusJakartaSans-ExtraBold";
+    src: url('../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf');
+}
+
+body
+{
+    font-family: "PlusJakartaSans-Medium";
+    font-size: 15px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--Very-light-grayish-blue);
+    color: var(--Very-dark-blue);
+}
+
+a
+{
+    font-family: "PlusJakartaSans-ExtraBold";
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+
+a:hover
+{
+    color: var(--Blue);
+}
+
+a[data-action="disabled"]
+{
+    color: var(--Dark-grayish-blue);
+}
+
+section > div:first-child a
+{
+    font-family: "PlusJakartaSans-Medium";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body > main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 64px 120px;
+}
+
+@media screen and (max-width:800px)
+{
+    body > main
+    {
+        padding: 0;
+    }
+}
+
+main > section
+{
+    background-color: white;
+    border-radius: 9px;
+    padding: 16px 24px;
+}
+
+section > div:first-child
+{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section > div:first-child > h1
+{
+    font-size: 24px;
+    font-family: "PlusJakartaSans-ExtraBold";
+    display: flex;
+}
+
+section > div:first-child > h1 span
+{
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 0px 20px;
+    border-radius: 9px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16px;
+}
+
+.notification
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 9px;
+}
+
+.notification:not(:first-child)
+{
+    margin-top: 16px;
+}
+
+.notification[data-seen="false"]
+{
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.notification[data-seen="false"] > div:first-child > div:nth-child(2) p
+{
+    position: relative;
+}
+
+.notification[data-seen="false"] > div:first-child > div:nth-child(2) p:first-child::after
+{
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 6px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100rem;
+    background-color: var(--Red);
+}
+
+.notification > div:first-child
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.notification > div:nth-child(2)
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notification > div:first-child > div:first-child
+{
+    margin-top: 12px;
+}
+
+.notification > div:first-child > div:first-child > img
+{
+    height: 50px;
+}
+
+.notification > div:first-child > div:nth-child(2)
+{
+    margin-left: 16px;
+}
+
+.notification > div:first-child > div:nth-child(2) p:first-child
+{
+    margin-bottom: 8px;
+    color: var(--Dark-grayish-blue);
+}
+
+.notification > div:first-child > div:nth-child(2) p:nth-child(2)
+{
+    color: var(--Grayish-blue);
+    margin-top: 0;
+}
+
+.notification .message
+{
+    padding: 8px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all .25s ease;
+    border: 1px solid var(--Light-grayish-blue-2)
+}
+
+.notification .message:hover
+{    
+    background-color: var(--Light-grayish-blue-1);
+    border-color: transparent;
+}
+
+.notification > div:nth-child(2) img
+{
+    height: 50px;
+    cursor: pointer;
+}

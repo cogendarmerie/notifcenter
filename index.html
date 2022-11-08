@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section>
+      <div>
+        <h1>Notifications <span id="numberUnread">0</span></h1>
+        <a id="setAllRead">Mark all as read</a>
+      </div>
+      <div>
+        <div class="notification" data-seen="false">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-mark-webber.webp" alt="">
+            </div>
+            <div>
+              <p><a>Mark Webber</a> reacted to your recent post <a>My first tournament today!</a></p>
+              <p>1m ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification" data-seen="false">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-angela-gray.webp" alt="">
+            </div>
+            <div>
+              <p><a>Angela Gray</a> followed you</p>
+              <p>5m ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification" data-seen="false">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
+            </div>
+            <div>
+              <p><a>Jacob Thompson</a> has joined your group <a>Chess Club</a></p>
+              <p>1 day ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification" data-seen="true">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+            </div>
+            <div>
+              <p><a>Rizky Hasanuddin</a> sent you a private message</p>
+              <p>5 days ago</p>
+              <div class="message">
+                <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+              </div>          
+            </div>
+          </div>
+        </div>
+        <div class="notification" data-seen="true">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
+            </div>
+            <div>
+              <p><a>Kimberly Smith</a> commented on your picture<a></a></p>
+              <p>1 week ago</p>
+            </div>
+          </div>
+          <div>
+            <img src="./assets/images/image-chess.webp" alt="">
+          </div>
+        </div>
+        <div class="notification" data-seen="true">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
+            </div>
+            <div>
+              <p><a>Nathan Peterson</a> Nathan Peterson reacted to your recent post <a data-action="disabled">5 end-game strategies to increase your win rate</a></p>
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification" data-seen="true">
+          <div>
+            <div>
+              <img src="./assets/images/avatar-anna-kim.webp" alt="">
+            </div>
+            <div>
+              <p><a>Anna Kimberly</a> Anna Kim left the group <a data-action="disabled">Chess Club</a></p>
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
